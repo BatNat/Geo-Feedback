@@ -1,0 +1,35 @@
+<div class="c-yell__title-bar">
+    <i class="fas fa-map-marker-alt"></i>
+    <span class="c-yell__address">{{address}}</span>
+    <a href="#" class="c-yell__close-button" id="close-button">
+        <div class="c-yell__close-icon"></div>
+    </a>
+</div>
+<div class="c-form__wrapper">
+    <div class="c-comments">
+        <ul class="c-comments__list">
+            {{#each places}}
+                <li class="c-comment">
+                    <div class="c-comment__title">
+                        <span class="c-comment__name">{{name}}</span>
+                        <span class="c-comment__location">{{location}}</span>
+                        <span class="c-comment__date">{{date}}</span>
+                    </div>
+                    <div class="c-comment__text">{{text}}</div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+    <form action="" class="c-form" id="comment-form">
+        <div class="c-form__title">Ваш отзыв</div>
+        <input type="text" name="username" class="c-form__input" id="comment-name" placeholder="Ваше имя"/>
+        <input type="text" name="location" class="c-form__input" id="comment-location" placeholder="Укажите место"/>
+        <textarea rows="9" name="comment" class="c-form__input c-form__input_textarea" id="comment-text"
+                  placeholder="Поделитесь впечатлениями">
+            </textarea>
+
+        <div class="c-form__submit-bar">
+            <a href="#" class="c-button" id="send-button">Добавить</a>
+        </div>
+    </form>
+</div>
